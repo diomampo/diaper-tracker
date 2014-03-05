@@ -30,6 +30,8 @@ angular.module('DiaperTrackerApp')
     };
 
     $scope.addDiaper = function(type) {
+      $scope.updateChartField(type);
+
       //I just wanted to use lodash for something
       var d = new Date( _.now() );
       var curr_date = d.getDate();

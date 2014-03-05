@@ -17,12 +17,14 @@ angular.module('DiaperTrackerApp')
           .attr("width", w)
           .attr("height", h);
 
-        var dataset = $scope.diaperHistory;
+        $scope.$watch('diaperHistory', function(newValue, oldValue){
+          drawChart();
+        }, true);
+        /*
         $scope.$watchCollection('diaperHistory', function(newCollection, oldCollection){
-          dataset = newCollection;
           drawChart();
         });
-
+        */
         attrs.$observe('field', function(value){
           drawChart();
         });
@@ -33,6 +35,8 @@ angular.module('DiaperTrackerApp')
 
         var drawChart = function() {
           svg.selectAll("rect").remove();
+
+          var dataset = $scope.diaperHistory;
 
           svg.selectAll("rect")
              .data(dataset)
