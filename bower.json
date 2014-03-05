@@ -1,0 +1,12 @@
+{
+  "name" : "grunt_bower_test",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.0.2",
+    "jquery": "~2.0.3",
+    "angular": "~1.2.14",
+    "angular-route": "~1.2.0",
+    "lodash": "~2.4.1",
+    "d3": "~3.4.3"
+  }
+}
